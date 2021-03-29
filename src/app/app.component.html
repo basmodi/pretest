@@ -1,0 +1,21 @@
+<div class="app">
+  <header>
+    <section>
+      <h1>{{ title }}</h1>
+      <h2> {{ version }}</h2>
+    </section>
+    <nav>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/Q1">Q1</a></li>
+        <li><a routerLink="/Q2">Q2</a></li>
+        <li><a routerLink="/not-found">not-found</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+</div>

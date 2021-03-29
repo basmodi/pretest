@@ -1,0 +1,16 @@
+<form [formGroup]="myForm">
+    <div>
+        <input formControlName="search" (change)="search($event.target.value)">
+        Value: {{ myForm.value | json }}
+        <table>
+            <tr>
+                <th>Index</th>
+                <th>Value</th>
+            </tr>
+            <tr *ngFor="let data of datassearch let i = index">
+                <td>{{i+1}}</td>
+                <td>{{data}}</td>
+            </tr>
+        </table>
+    </div>
+</form>

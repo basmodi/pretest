@@ -1,0 +1,26 @@
+<form [formGroup]="myForm">
+    <div ngClass="flex-container">
+            
+            <div id="box1" ngClass="box">
+                Value: {{ myForm.value | json }}
+                <!-- <input [(ngModel)]="input1" name="name" (ngModelChange)="input1Change($event)" value="{{input1}}" />
+                {{input1}} -->
+                    <input formControlName="input1" (keyup.enter)="input1Enter($event)"  (change)="input1Change($event.target.value)"  value="{{myForm.value.input1}}">
+                
+
+            </div>
+            <div id="box2" ngClass="box">
+                <select class="custom-select" formControlName="input2" (change)="input2Change($event.target.value)">
+                    
+                    <option value="isFibonacci">isFibonacci</option>
+                    <option value="isPrime">isPrime</option>
+                    
+                </select>
+            </div>
+            <div id="box3" ngClass="box">
+                {{col3}}
+            </div>
+        
+    </div>
+</form>
+
